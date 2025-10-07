@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frappe HR - Open Source HRMS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a202c;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 3rem 2rem;
+        }
+
+        .alert {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+        }
+
+        .alert h3 {
+            color: #856404;
+            margin-bottom: 0.5rem;
+        }
+
+        .alert p {
+            color: #856404;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature {
+            padding: 1.5rem;
+            background: #f7fafc;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .feature p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .setup-section {
+            background: #edf2f7;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .setup-section h2 {
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
+        }
+
+        .setup-option {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .setup-option h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 1rem 0;
+        }
+
+        .links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .link-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .link-button:hover {
+            background: #5a67d8;
+        }
+
+        .link-button.secondary {
+            background: #48bb78;
+        }
+
+        .link-button.secondary:hover {
+            background: #38a169;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏢 Frappe HR</h1>
+            <p>Open Source HR & Payroll Management System</p>
+        </div>
+
+        <div class="content">
+            <div class="alert">
+                <h3>⚠️ Setup Required</h3>
+                <p>This is a Frappe Framework application that requires the Frappe Framework and ERPNext to run. Please follow the setup instructions below to get started.</p>
+            </div>
+
+            <section>
+                <h2 style="margin-bottom: 1rem; color: #2d3748;">Key Features</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>👥 Employee Lifecycle</h3>
+                        <p>From onboarding to exit interviews, manage the complete employee journey efficiently.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>📅 Leave & Attendance</h3>
+                        <p>Configure leave policies, track attendance with geolocation, and manage leave balances.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>💰 Payroll & Taxation</h3>
+                        <p>Create salary structures, configure income tax slabs, and run standard payroll processing.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>💳 Expense Claims</h3>
+                        <p>Manage employee advances, claim expenses with multi-level approval workflows.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>📊 Performance Management</h3>
+                        <p>Track goals, align KRAs, enable self-evaluations, and manage appraisal cycles.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>📱 Mobile App</h3>
+                        <p>Apply for leaves, check-in/out, and access employee profiles on the go.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="setup-section">
+                <h2>🚀 Setup Instructions</h2>
+
+                <div class="setup-option">
+                    <h3>Option 1: Docker (Recommended)</h3>
+                    <p>Quick setup using Docker:</p>
+                    <div class="code-block">
+git clone https://github.com/frappe/hrms<br>
+cd hrms/docker<br>
+docker-compose up
+                    </div>
+                    <p>Access at: <strong>http://localhost:8000</strong></p>
+                    <p>Login with <strong>Administrator</strong> / <strong>admin</strong></p>
+                </div>
+
+                <div class="setup-option">
+                    <h3>Option 2: Local Installation</h3>
+                    <p>Install using Frappe Bench:</p>
+                    <div class="code-block">
+bench new-site hrms.local<br>
+bench get-app erpnext<br>
+bench get-app hrms<br>
+bench --site hrms.local install-app hrms<br>
+bench --site hrms.local add-to-hosts
+                    </div>
+                    <p>Access at: <strong>http://hrms.local:8080</strong></p>
+                </div>
+
+                <div class="setup-option">
+                    <h3>Option 3: Managed Hosting</h3>
+                    <p>Try Frappe Cloud for hassle-free hosting with automatic updates and maintenance.</p>
+                </div>
+            </div>
+
+            <div class="links">
+                <a href="https://frappe.io/hr" class="link-button" target="_blank">Official Website</a>
+                <a href="https://docs.frappe.io/hr/introduction" class="link-button secondary" target="_blank">Documentation</a>
+                <a href="https://github.com/frappe/hrms" class="link-button secondary" target="_blank">GitHub Repository</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
